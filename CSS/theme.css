@@ -1,0 +1,44 @@
+:root {
+    /* Thème clair (par défaut) */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #ffffff;
+    --card-bg: #f7f8fa;
+}
+
+[data-theme="dark"] {
+    /* Thème sombre */
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #2d2d2d;
+    --card-bg: #333333;
+}
+
+/* Style du bouton de thème */
+.theme-toggle {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 20px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+/* Styles généraux */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.header {
+    background-color: var(--header-bg);
+}
+
+.pricing, .service, .panel {
+    background-color: var(--card-bg);
+} 

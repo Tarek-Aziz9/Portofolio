@@ -4,6 +4,7 @@
    
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Portfolio de Tarek-Aziz</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -16,6 +17,8 @@
         <link href="css/animate.css" rel="stylesheet">
         <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
    
@@ -29,6 +32,11 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Ajout du bouton de thème -->
+                        <button id="theme-toggle" class="theme-toggle">
+                            <i class="fa fa-moon-o"></i>
                         </button>
 
                           <div class="logo">
@@ -93,7 +101,7 @@
                                 <h2 class="carousel-title">Qu'est-ce que je sais faire ?</h2>
                                 <p class="color-white"> Consultez ici mon CV <br/> </p>
                             </div>
-                                <a href="/telecharger-cv.php">  Cliquez ici</a>
+                            <a href="cv/mon-cv.pdf" download class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Télécharger mon CV</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +189,7 @@
                                         </div>
                                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                             <div class="panel-body">
-                                                <a>L'option Solutions d'Infrastructure, Systèmes et Réseaux (SSIR) du BTS Services Informatiques aux Organisations (SIO) forme des spécialistes en administration et sécurisation des infrastructures réseau et systèmes informatiques. Les étudiants acquièrent des compétences en gestion de serveurs, réseaux, virtualisation, et cybersécurité, préparant ainsi à des carrières comme administrateur systèmes et réseaux, technicien d’infrastructure, ou spécialiste en sécurité informatique.</a>
+                                                <a>L'option Solutions d'Infrastructure, Systèmes et Réseaux (SSIR) du BTS Services Informatiques aux Organisations (SIO) forme des spécialistes en administration et sécurisation des infrastructures réseau et systèmes informatiques. Les étudiants acquièrent des compétences en gestion de serveurs, réseaux, virtualisation, et cybersécurité, préparant ainsi à des carrières comme administrateur systèmes et réseaux, technicien d'infrastructure, ou spécialiste en sécurité informatique.</a>
                                             </div>
                                         </div>
                                     </div>
@@ -226,7 +234,7 @@
 
                 <div class="row">
                     <!-- Calculatrice-->
-                    <div class="col-sm-4 sm-margin-b-50">
+                    <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="img/cal.png" alt=" Calculatrice immobilière ">
                         </div>
@@ -237,7 +245,7 @@
                     <!--  -->
 
                     <!-- Sonomètre -->
-                    <div class="col-sm-4 sm-margin-b-50">
+                    <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="" alt=" ">
                         </div>
@@ -248,7 +256,7 @@
                     <!-- End Latest Products -->
 
                     <!-- Latest Products -->
-                    <div class="col-sm-4 sm-margin-b-50">
+                    <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="" alt="">
                         </div>
@@ -268,7 +276,7 @@
             <div class="bg-color-sky-light">
                 <div class="content-lg container">
                     <div class="row row-space-1">
-                        <div class="col-sm-4 sm-margin-b-2">
+                        <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
                             <!-- Pricing -->
                             <h2>COMPETENCES</h2>
                             <div class="pricing">
@@ -284,7 +292,7 @@
                             </div>
                             <!-- End Pricing -->
                         </div>
-                        <div class="col-sm-4 sm-margin-b-2">
+                        <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
                             <!-- Pricing -->
                             <div class="pricing pricing-active">
                                 <div class="margin-b-30">
@@ -300,7 +308,7 @@
                             </div>
                             <!-- End Pricing -->
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
                             <!-- Pricing -->
                             <div class="pricing">
                                 <div class="margin-b-30">
@@ -328,10 +336,10 @@
             <div class="section-seperator">
                 <div class="content-md container">
                     <div class="row margin-b-40">
-                        <div class="col-sm-6">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <h2> ENTREPRISE </h2>
                             <p><B> MECALan se distingue comme un équipementier de premier plan, spécialisé dans la conception, le.développement, la commercialisation, l'installation et la maintenance.d'équipements et de logiciels destinés aux.centres de contrôles techniques pour véhicules légers (VL), poids lourds (PL) et de.catégorie L.</B> </p>
-                            <a href="www.mecalan.com" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Qui sommes-nous?</a>
+                            <a href="https://www.mecalan.com" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Qui sommes-nous?</a>
                             <img class="full-width img-responsive wow fadeInUp" src="img/mecalan_logo.jpeg" alt="Portfolio Image"
                             <img class ="img-responsive wow fadeInUp"  src="img/FACADE.jpg" alt="Façade mecalan">
                         </div>
@@ -363,93 +371,11 @@
             <div class="bg-color-sky-light" data-auto-height="true">
                 <div class="content-lg container">
                     <div class="row margin-b-40">
-                        <div class="col-sm-6">
-                            <h2></h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
+                        <div class="col-sm-12 text-center">
+                            <h2>TABLEAU DE SYNTHESE</h2>
+                            <img class="img-responsive center-block" src="img/tableau-synthese.jpg" alt="Tableau de synthèse">
                         </div>
                     </div>
-                    <!--// end row -->
-
-                    <div class="row row-space-1 margin-b-2">
-                        <div class="col-sm-4 sm-margin-b-2">
-                            <h2> TABLEAU DE SYNTHESE </h2>
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-chemistry"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Company Formation</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                        <div class="col-sm-4 sm-margin-b-2">
-                            <div class="service bg-color-base" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon color-white icon-screen-tablet"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 class="color-white">Stuff Management</h3>
-                                    <p class="color-white margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>KPI Optimization</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <!--// end row -->
-
-                    <div class="row row-space-1">
-                        <div class="col-sm-4 sm-margin-b-2">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-notebook"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Information Security</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                        <div class="col-sm-4 sm-margin-b-2">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-speedometer"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Recrutinment</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Materials Supply</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <!--// end row -->
                 </div>
             </div>
         </div>

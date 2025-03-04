@@ -1,0 +1,80 @@
+/* Règles générales de responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Petits écrans (smartphones) */
+@media (max-width: 576px) {
+    .carousel-title {
+        font-size: 24px;
+    }
+    
+    .carousel-centered {
+        padding: 0 15px;
+    }
+    
+    .menu-container {
+        padding: 0;
+    }
+    
+    .nav-item-child {
+        padding: 10px 15px;
+    }
+    
+    .masonry-grid-item {
+        width: 100%;
+    }
+    
+    .margin-b-60 {
+        margin-bottom: 30px;
+    }
+}
+
+/* Tablettes */
+@media (min-width: 577px) and (max-width: 991px) {
+    .carousel-title {
+        font-size: 32px;
+    }
+    
+    .masonry-grid-item {
+        width: 50%;
+    }
+}
+
+/* Ajustements pour le header fixe */
+@media (max-width: 991px) {
+    .header .navbar {
+        padding: 10px 0;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+}
+
+/* Ajustements pour les sections de contenu */
+@media (max-width: 767px) {
+    .content-lg {
+        padding: 40px 0;
+    }
+    
+    .pricing {
+        margin-bottom: 15px;
+    }
+    
+    .service {
+        margin-bottom: 30px;
+    }
+}
+
+/* Ajustements pour le footer */
+@media (max-width: 767px) {
+    .footer {
+        text-align: center;
+    }
+    
+    .footer-list {
+        margin-bottom: 30px;
+    }
+} 
