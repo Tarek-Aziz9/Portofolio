@@ -4,6 +4,14 @@
     --text-color: #333333;
     --header-bg: #ffffff;
     --card-bg: #f7f8fa;
+    --section-bg: #f7f8fa;
+    --footer-bg: #333333;
+    --footer-text: #ffffff;
+    --link-color: #007bff;
+    --border-color: #ddd;
+    --accordion-bg: #ffffff;
+    --pricing-bg: #ffffff;
+    --service-bg: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -12,33 +20,442 @@
     --text-color: #ffffff;
     --header-bg: #2d2d2d;
     --card-bg: #333333;
+    --section-bg: #2d2d2d;
+    --footer-bg: #2a2a2a;
+    --footer-text: #ffffff;
+    --link-color: #66b0ff;
+    --border-color: #444;
+    --accordion-bg: #2d2d2d;
+    --pricing-bg: #2d2d2d;
+    --service-bg: #2d2d2d;
 }
 
 /* Style du bouton de thème */
 .theme-toggle {
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    color: var(--text-color);
-    font-size: 20px;
     position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 1000;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.theme-toggle i {
+    font-size: 24px;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .theme-toggle {
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .theme-toggle i {
+        font-size: 20px;
+    }
 }
 
 /* Styles généraux */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
     transition: all 0.3s ease;
 }
 
-.header {
-    background-color: var(--header-bg);
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color) !important;
 }
 
-.pricing, .service, .panel {
+p {
+    color: var(--text-color) !important;
+}
+
+/* Conteneurs spécifiques */
+.container,
+.row,
+[class^="col-"] {
+    background-color: var(--background-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--header-bg) !important;
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-item-child {
+    color: var(--text-color) !important;
+}
+
+/* Sections */
+.bg-color-sky-light {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Cards et éléments */
+.stack-item,
+.pricing,
+.service,
+.panel {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stack-item h3, .pricing h3, .service h3 {
+    color: var(--text-color) !important;
+}
+
+.stack-item p, .pricing p, .service p {
+    color: var(--text-color) !important;
+}
+
+/* Accordion */
+.panel {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color);
+}
+
+.panel-title a {
+    color: var(--text-color) !important;
+}
+
+.panel-body {
+    color: var(--text-color) !important;
+    background-color: var(--card-bg) !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-bg) !important;
+    padding: 40px 0;
+    position: relative;
+    color: var(--footer-text) !important;
+}
+
+.footer-title {
+    color: var(--footer-text) !important;
+    margin-bottom: 20px;
+}
+
+.footer-list-item,
+.footer-list-item a {
+    color: var(--footer-text) !important;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-list-item a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Section séparateur */
+.section-seperator {
+    background-color: var(--background-color) !important;
+}
+
+/* Liens */
+a {
+    color: var(--link-color) !important;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Texte blanc forcé */
+.color-white {
+    color: #ffffff !important;
+}
+
+/* Conserver les styles existants */
+.stack-item {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.stack-item:hover {
+    transform: translateY(-5px);
+}
+
+.stack-item img {
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+.stack-item h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stack-item p {
+    color: #666;
+    margin-top: 15px;
+}
+
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+
+/* Styles pour la navigation */
+.header {
+    background-color: var(--header-bg);
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Style du menu burger */
+.navbar-toggle {
+    border-color: var(--text-color);
+    margin-right: 45px;
+}
+
+.navbar-toggle .toggle-icon {
+    background-color: var(--text-color);
+}
+
+.navbar-toggle .toggle-icon::before,
+.navbar-toggle .toggle-icon::after {
+    background-color: var(--text-color);
+}
+
+/* Styles responsive */
+@media (max-width: 991px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .header .navbar-nav {
+        background-color: var(--header-bg);
+        padding: 10px 0;
+        margin: 0;
+        float: none !important;
+    }
+
+    .header .navbar-nav-right {
+        float: none !important;
+    }
+
+    .nav-collapse {
+        border-top: 1px solid var(--border-color);
+        margin-top: 10px;
+    }
+
+    .nav-item-child {
+        padding: 12px 12px !important;
+        display: block;
+        font-size: 16px;
+    }
+
+    /* Ajustement du bouton thème en responsive */
+    .theme-toggle {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    /* Gestion du menu déroulant */
+    .navbar-collapse {
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+}
+
+/* Ajustements pour très petits écrans */
+@media (max-width: 480px) {
+    .header .menu-container {
+        width: 100%;
+    }
+
+    .navbar-toggle {
+        margin-right: 35px;
+    }
+
+    .theme-toggle {
+        right: 5px;
+    }
+}
+
+/* Forcer les couleurs de fond */
+.content-lg,
+.content-md,
+.section-seperator {
+    background-color: var(--background-color) !important;
+}
+
+/* Transitions */
+*, *::before, *::after {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Exceptions pour le texte blanc */
+.carousel-title,
+.color-white {
+    color: #ffffff !important;
+}
+
+/* Bouton de thème */
+.theme-toggle {
+    color: var(--text-color) !important;
+    border: 1px solid var(--text-color) !important;
+}
+
+/* Pricing icons */
+.pricing-icon {
+    color: var(--text-color) !important;
+}
+
+/* Service icons */
+.service-icon {
+    color: var(--text-color) !important;
+}
+
+/* Styles pour la bannière de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: var(--card-bg);
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+
+.cookie-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cookie-banner-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Styles pour la modal de cookies */
+.cookie-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.cookie-modal-content {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cookie-options {
+    margin: 20px 0;
+}
+
+.cookie-option {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.cookie-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Styles des boutons */
+.cookie-banner button,
+.cookie-modal button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--link-color);
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.cookie-banner button:hover,
+.cookie-modal button:hover {
+    opacity: 0.8;
+}
+
+/* Correction pour la navbar */
+.header .navbar {
+    background-color: var(--background-color) !important;
+}
+
+.header .nav-item-child {
+    color: var(--text-color) !important;
+}
+
+/* Styles pour l'accordéon BTS SIO */
+.panel-default {
+    background-color: var(--background-color) !important;
+    border-color: var(--text-color) !important;
+}
+
+.panel-title-child {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+}
+
+.panel-body {
+    color: var(--text-color) !important;
+}
+
+.panel-heading {
+    background-color: var(--background-color) !important;
+    border-color: var(--text-color) !important;
+}
+
+#bts-sio h2, 
+#bts-sio p {
+    color: var(--text-color) !important;
 } 

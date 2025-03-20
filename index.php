@@ -24,22 +24,20 @@
    
   
     <body id="body" data-spy="scroll" data-target=".header">
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fa fa-moon-o"></i>
+        </button>
 
-          <header class="header navbar-fixed-top">
-              <nav class="navbar" role="navigation">
+        <header class="header navbar-fixed-top">
+            <nav class="navbar" role="navigation">
                 <div class="container">
-                      <div class="menu-container js_nav-item">
+                    <div class="menu-container js_nav-item">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="toggle-icon"></span>
                         </button>
 
-                        <!-- Ajout du bouton de thème -->
-                        <button id="theme-toggle" class="theme-toggle">
-                            <i class="fa fa-moon-o"></i>
-                        </button>
-
-                          <div class="logo">
+                        <div class="logo">
                             <a class="logo-wrap" href="#body">
                             </a>
                         </div>
@@ -101,7 +99,7 @@
                                 <h2 class="carousel-title">Qu'est-ce que je sais faire ?</h2>
                                 <p class="color-white"> Consultez ici mon CV <br/> </p>
                             </div>
-                            <a href="cv/mon-cv.pdf" download class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Télécharger mon CV</a>
+                            <a href="CV/mon_cv.pdf" target="_blank" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Consulter mon CV</a>
                         </div>
                     </div>
                 </div>
@@ -113,110 +111,118 @@
         <!-- About -->
         <div id="about">
             <div class="content-lg container">
+                <h2 class="text-center margin-b-40">STACKS</h2>
                 <!-- Masonry Grid -->
-                <div class="masonry-grid row">
-                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
-                        <div class="margin-b-60">
-                            <h2> HTML/CSS </h2>
-                            <p>  </p>
-                        </div>
-                        <img class="full-width img-responsive wow fadeInUp" src="img/html5-css3.png " alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".2s">
-                    </div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
-                        <div class="margin-b-60">
-                          <h2>JavaScript</h2>
-                          <p> </p>  
-                          
-                        </div>
-						 <img class="semi-width img-responsive wow fadeInUp" src="img/javascript.png" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".3s">
-
-                    </div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
-                        <div class="margin-t-60 margin-b-60">
-                            <h2> PHP/MySQL</h2>
-                            <p> </p>               
-                        </div>
-                        <img class="full-width img-responsive wow fadeInUp" src=" img/php-mysql.png " alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".4s">
-                    </div>
-                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
-                        <div class="margin-b-60">
-                            <h2> WINDEV </h2>
-                            <p> </p>               
-                        </div>
-                        <img class="semi-width img-responsive wow fadeInUp" src="img/windev.webp" alt="Portfolio Image" >
-                    </div>
-				</div>
-                <!-- End Masonry Grid -->
-            </div>
-            <div id = "bts sio">
-            <div class="bg-color-sky-light">
-                <div class="content-lg container">
-                    <div class="row">
-                        <div class="col-md-5 col-sm-5 md-margin-b-60">
-                            <div class="margin-t-50 margin-b-30">
-                                <h2> Qu'est-ce que le BTS SIO?</h2>
-                                <p> Le Brevet de Technicien Supérieur des Services Informatiques aux Organisations  est une formation de deux ans faisant suite à un programme de licence français. Elle forme des techniciens supérieurs spécialisés dans les services informatiques et se décline en deux filières principales : « Solutions d'Infrastructures, Systèmes et Réseaux » (SISR) et « Solutions Logicielles et Applications Métiers » (SLAM). </p>
+                <div class="row">
+                    <!-- HTML/CSS -->
+                    <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                        <div class="stack-item margin-b-30">
+                            <h3>HTML/CSS</h3>
+                            <div class="margin-b-20">
+                                <img class="img-responsive center-block" src="img/html5-css3.png" alt="HTML/CSS" style="max-height: 150px;">
                             </div>
+                            <p>Technologies fondamentales du développement web</p>
                         </div>
-                        <div class="col-md-5 col-sm-7 col-md-offset-2">
-                            <!-- Accordion -->
-                            <div class="accordion">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <h4 class="panel-title">
-                                                <a class="panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Option SLAM (Solutions Logicielles et Applications Métiers)
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <a>L'option SLAM (Solutions Logicielles et Applications Métier) du BTS SIO (Services Informatiques aux Organisations) forme des spécialistes en développement de logiciels et applications. On y apprend à concevoir, réaliser et maintenir des solutions logicielles adaptées aux besoins des entreprises. Ce cursus inclut des compétences en programmation, gestion de bases de données, analyse des besoins et gestion de projets informatiques.
-                                                </a>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                        <div class="stack-item margin-b-30">
+                            <h3>JavaScript</h3>
+                            <div class="margin-b-20">
+                                <img class="img-responsive center-block" src="img/javascript.png" alt="JavaScript" style="max-height: 150px;">
+                            </div>
+                            <p>Langage de programmation web dynamique</p>
+                        </div>
+                    </div>
+
+                    <!-- PHP/MySQL -->
+                    <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                        <div class="stack-item margin-b-30">
+                            <h3>PHP/MySQL</h3>
+                            <div class="margin-b-20">
+                                <img class="img-responsive center-block" src="img/php-mysql.png" alt="PHP/MySQL" style="max-height: 150px;">
+                            </div>
+                            <p>Développement back-end et bases de données</p>
+                        </div>
+                    </div>
+
+                    <!-- WINDEV -->
+                    <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                        <div class="stack-item margin-b-30">
+                            <h3>WINDEV</h3>
+                            <div class="margin-b-20">
+                                <img class="img-responsive center-block" src="img/windev.webp" alt="WINDEV" style="max-height: 150px;">
+                            </div>
+                            <p>Développement d'applications Windows et systèmes embarqués</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Masonry Grid --
+            </div>
+            <div id="bts sio">
+                <div class="bg-color-sky-light">
+                    <div class="content-lg container">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 md-margin-b-60">
+                                <div class="margin-t-50 margin-b-30">
+                                    <h2>Qu'est-ce que le BTS SIO?</h2>
+                                    <p>Le Brevet de Technicien Supérieur des Services Informatiques aux Organisations est une formation de deux ans faisant suite à un programme de licence français. Elle forme des techniciens supérieurs spécialisés dans les services informatiques et se décline en deux filières principales : « Solutions d'Infrastructures, Systèmes et Réseaux » (SISR) et « Solutions Logicielles et Applications Métiers » (SLAM).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 col-md-offset-2">
+                                <!-- Accordion -->
+                                <div class="accordion">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        Option SLAM (Solutions Logicielles et Applications Métiers)
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    L'option SLAM (Solutions Logicielles et Applications Métier) du BTS SIO (Services Informatiques aux Organisations) forme des spécialistes en développement de logiciels et applications. On y apprend à concevoir, réaliser et maintenir des solutions logicielles adaptées aux besoins des entreprises. Ce cursus inclut des compétences en programmation, gestion de bases de données, analyse des besoins et gestion de projets informatiques.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Option SSIR (Solutions d'Infrastructures, Systèmes et Réseaux) 
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                <a>L'option Solutions d'Infrastructure, Systèmes et Réseaux (SSIR) du BTS Services Informatiques aux Organisations (SIO) forme des spécialistes en administration et sécurisation des infrastructures réseau et systèmes informatiques. Les étudiants acquièrent des compétences en gestion de serveurs, réseaux, virtualisation, et cybersécurité, préparant ainsi à des carrières comme administrateur systèmes et réseaux, technicien d'infrastructure, ou spécialiste en sécurité informatique.</a>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Option SISR (Solutions d'Infrastructures, Systèmes et Réseaux)
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    L'option Solutions d'Infrastructure, Systèmes et Réseaux (SISR) du BTS Services Informatiques aux Organisations (SIO) forme des spécialistes en administration et sécurisation des infrastructures réseau et systèmes informatiques. Les étudiants acquièrent des compétences en gestion de serveurs, réseaux, virtualisation, et cybersécurité, préparant ainsi à des carrières comme administrateur systèmes et réseaux, technicien d'infrastructure, ou spécialiste en sécurité informatique.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Pourquoi le SLAM ?
-                                                </a>
-                                                    
-                                            </h4>
-                                        </div>
-                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                            <div class="panel-body">
-                                                <a> Ma passion pour le développement web est animée par ma curiosité insatiable et mon désir d'apprendre. </a>
-                                                
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Pourquoi le SLAM ?
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    Ma passion pour le développement web est animée par ma curiosité insatiable et mon désir d'apprendre.
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- End Accordion -->
                             </div>
-                            <!-- End Accodrion -->
                         </div>
                     </div>
-                    <!--// end row -->
                 </div>
-            </div>
             </div>
         </div>
         <!-- End About -->
@@ -236,11 +242,11 @@
                     <!-- Calculatrice-->
                     <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-50">
                         <div class="margin-b-20">
-                            <img class="img-responsive" src="img/cal.png" alt=" Calculatrice immobilière ">
+                            <img class="img-responsive" src="img/AOEsoft.png" alt="AOESoft">
                         </div>
-                        <h4><a href="#">CALCULATRICE IMMOBILIERE</a> <span class="text-uppercase margin-l-20"></span></h4>
+                        <h4><a href="#">AOESoft</a> <span class="text-uppercase margin-l-20"></span></h4>
                         <p> </p>
-                        <a class="link" href="Projets/Calculatrice /index.html"> Cliquez ici</a>
+                        <a class="link" href=""> Cliquez ici</a>
                     </div>
                     <!--  -->
 
@@ -258,7 +264,7 @@
                     <!-- Latest Products -->
                     <div class="col-xs-12 col-sm-6 col-md-4 sm-margin-b-50">
                         <div class="margin-b-20">
-                            <img class="img-responsive" src="" alt="">
+                            <img class="img-responsive" src="img/WKt.png" alt="Bienvenue Formation">
                         </div>
                         <h4><a href="#">BIENVENUE FORMATION</a> <span class="text-uppercase margin-l-20"></span></h4>
                         <p></p>
@@ -367,13 +373,18 @@
         <!-- End Work -->
 
         <!-- BTS SIO -->
-        <div id="synthese"-active>
+        <div id="synthese">
             <div class="bg-color-sky-light" data-auto-height="true">
                 <div class="content-lg container">
                     <div class="row margin-b-40">
                         <div class="col-sm-12 text-center">
                             <h2>TABLEAU DE SYNTHESE</h2>
-                            <img class="img-responsive center-block" src="img/tableau-synthese.jpg" alt="Tableau de synthèse">
+                            <div class="margin-b-20">
+                                <img class="img-responsive center-block" 
+                                     src="img/synthèse.png" 
+                                     alt="Tableau de synthèse"
+                                     style="max-width: 100%; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -383,74 +394,148 @@
             
         <!-- Veille -->
         <div id="contact">
-            <!-- Contact List -->
             <div class="section-seperator">
                 <div class="content-lg container">
                     <div class="row">
-                        <h3> GEMI</h3>
+                        <div class="col-sm-12">
+                            <h2>VEILLE TECHNOLOGIQUE</h2>
+                            <p class="margin-b-20">La veille technologique est un processus de surveillance active de l'évolution des technologies dans un secteur d'activité donné.</p>
+                        </div>
                     </div>
                     
+                    <div class="row margin-b-50">
+                        <div class="col-sm-6">
+                            <h3>Sujet de veille : L'Intelligence Artificielle dans le développement web</h3>
+                            <p>Je réalise une veille sur l'IA appliquée au développement web, en suivant particulièrement :</p>
+                            <ul class="list-unstyled margin-b-30">
+                                <li><i class="fa fa-check"></i> Les nouveaux outils d'assistance au développement</li>
+                                <li><i class="fa fa-check"></i> L'automatisation du code</li>
+                                <li><i class="fa fa-check"></i> Les frameworks intégrant l'IA</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <h3>Outils de veille</h3>
+                            <div class="margin-b-30">
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-rss"></i> Flux RSS de blogs tech</li>
+                                    <li><i class="fa fa-twitter"></i> Twitter/X (suivis d'experts)</li>
+                                    <li><i class="fa fa-github"></i> GitHub (tendances)</li>
+                                    <li><i class="fa fa-medium"></i> Medium (articles techniques)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sources d'information -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3>Sources principales</h3>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon fa fa-newspaper-o"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Articles techniques</h3>
+                                    <p>Dev.to, Medium, FreeCodeCamp</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon fa fa-video-camera"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Vidéos et Webinars</h3>
+                                    <p>YouTube, Conférences en ligne</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon fa fa-users"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Communautés</h3>
+                                    <p>Stack Overflow, GitHub Discussions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- End Contact List -->
-            
-        
-        <!-- End Contact -->
+        </div>
+        <!-- End Veille -->
         <!--========== END PAGE LAYOUT ==========-->
 
         <!--========== FOOTER ==========-->
         <footer class="footer">
-            <!-- Links -->
             <div class="section-seperator">
                 <div class="content-md container">
                     <div class="row">
-                        <div class="col-sm-2 sm-margin-b-30">
-                            <!-- List -->
+                        <!-- Contact -->
+                        <div class="col-sm-4 sm-margin-b-30">
+                            <h4 class="footer-title">Contact</h4>
                             <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item"><a href="#body">Home</a></li>
-                                <li class="footer-list-item"><a href="#about">Team</a></li>
-                                <li class="footer-list-item"><a href="#work">Credentials</a></li>
-                                <li class="footer-list-item"><a href="#">Contact</a></li>
+                                <li class="footer-list-item">
+                                    <i class="fa fa-envelope"></i>
+                                    <a href="mailto:tarekcarter009@gmail.com"> Email</a>
+                                </li>
+                                <li class="footer-list-item">
+                                    <i class="fa fa-linkedin"></i>
+                                    <a href="http://linkedin.com/in/tarek-aziz-alassani-9b7b47215"> LinkedIn</a>
+                                </li>
+                                <li class="footer-list-item">
+                                    <i class="fa fa-github"></i>
+                                    <a href="https://github.com/Tarek-Aziz9"> GitHub</a>
+                                </li>
+                                <li class="footer-list-item">
+                                    <i class="fa fa-map-marker"></i>
+                                    <span>Angers, France</span>
+                                </li>
                             </ul>
-                            <!-- End List -->
                         </div>
-                        <div class="col-sm-2 sm-margin-b-30">
-                            <!-- List -->
+                        
+                        <!-- Navigation Rapide -->
+                        <div class="col-sm-4 sm-margin-b-30">
+                            <h4 class="footer-title">Navigation Rapide</h4>
                             <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item"><a href="#">Twitter</a></li>
-                                <li class="footer-list-item"><a href= " ">Instagram</a></li>
-                                <li class="footer-list-item"><a href=" http://linkedin.com/in/tarek-aziz-alassani-9b7b47215"> Linkedin </a></li>
+                                <li class="footer-list-item"><a href="#body">Accueil</a></li>
+                                <li class="footer-list-item"><a href="#about">Stacks</a></li>
+                                <li class="footer-list-item"><a href="#products">Projets</a></li>
+                                <li class="footer-list-item"><a href="#contact">Veille</a></li>
                             </ul>
-                            <!-- End List -->
                         </div>
-                        <div class="col-sm-3">
-                            <!-- List -->
-                            <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item"><a href="#">Subscribe to Our Newsletter</a></li>
-                                <li class="footer-list-item"><a href="#">Privacy Policy</a></li>
-                                <li class="footer-list-item"><a href="#">Terms &amp; Conditions</a></li>
-                            </ul>
-                            <!-- End List -->
-                        </div>
-                    </div>
-                    <!--// end row -->
-                </div>
-            </div>
-            <!-- End Links -->
 
-            <!-- Copyright -->
-            <div class="content container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <img class="footer-logo" src="img/logo-dark.png" alt="flameonepage Logo">
+                        <!-- Cookies et Mentions légales -->
+                        <div class="col-sm-4">
+                            <h4 class="footer-title">Mentions légales</h4>
+                            <ul class="list-unstyled footer-list">
+                                <li class="footer-list-item">
+                                    <a href="js/cookies.js" id="cookie-settings">Paramètres des cookies</a>
+                                </li>
+                                <li class="footer-list-item">
+                                    <a href="Param/politique-confidentialite.html">Politique de confidentialité</a>
+                                </li>
+                                <li class="footer-list-item">
+                                    <a href="Param/mentions-legales.html">Mentions légales</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <p class="margin-b-0"><a class="fweight-700" href="#"></a>  <a class="fweight-700" href=""></a></p>
+
+                    <!-- Copyright -->
+                    <div class="row margin-t-20">
+                        <div class="col-sm-12 text-center">
+                            <p class="margin-b-0">© 2025 Portfolio Tarek-Aziz ALASSANI. Tous droits réservés.</p>
+                        </div>
                     </div>
                 </div>
-                <!--// end row -->
             </div>
-            <!-- End Copyright -->
         </footer>
         <!--========== END FOOTER ==========-->
 
@@ -477,7 +562,8 @@
         <script src="js/components/wow.min.js" type="text/javascript"></script>
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/masonry.min.js" type="text/javascript"></script>
-
+        <script src="js/theme.js" type="text/javascript"></script>
+        <script src="js/cookies.js" type="text/javascript"></script>
     </body>
     <!-- END BODY -->
     
