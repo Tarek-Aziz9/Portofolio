@@ -17,20 +17,59 @@ jobs:
           script: |
             echo "=== Début du déploiement ==="
 
-            # Vérification de la configuration Nginx
+            # Vérification et correction de la configuration Nginx
             echo "Configuration Nginx :"
-            nginx -T | grep -A 20 "server_name tarek-aziz.alassani.angers.mds-project.fr"
+            cat > /etc/nginx/sites-available/tarek-aziz.alassani.angers.mds-project.fr << 'EOL'
+            server {
+                listen 80;
+                server_name tarek-aziz.alassani.angers.mds-project.fr;
+                root /var/www/html/Portofolio;
+
+                access_log  /var/log/nginx/tarek-aziz.alassani.angers.mds-project.fr.access.log;
+                error_log  /var/log/nginx/tarek-aziz.alassani.angers.mds-project.fr.error.log;
+
+                fastcgi_buffers 16 16k;
+                fastcgi_buffer_size 32k;
+
+                add_header X-Frame-Options "SAMEORIGIN";
+                add_header X-XSS-Protection "1; mode=block";
+                add_header X-Content-Type-Options "nosniff";
+
+                index index.php index.htm;
+
+                location / {
+                    try_files $uri $uri/ /index.php?$query_string;
+                }
+
+                location ~ \.php$ {
+                    include snippets/fastcgi-php.conf;
+                    fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+                    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                    include fastcgi_params;
+                }
+
+                location ~ /\.(?!well-known).* {
+                    deny all;
+                }
+            }
+            EOL
+
+            # Création du lien symbolique si nécessaire
+            ln -sf /etc/nginx/sites-available/tarek-aziz.alassani.angers.mds-project.fr /etc/nginx/sites-enabled/
 
             # Vérification du répertoire root
             ROOT_DIR="/var/www/html/Portofolio"
             echo "Répertoire root : $ROOT_DIR"
 
+            # Création du répertoire s'il n'existe pas
+            mkdir -p $ROOT_DIR
+
             # Vérification de l'état actuel
             echo "État actuel du répertoire :"
             ls -la $ROOT_DIR
 
-            # Sauvegarde des permissions actuelles
-            echo "Sauvegarde des permissions actuelles..."
+            # Configuration des permissions
+            echo "Configuration des permissions..."
             chown -R www-data:www-data $ROOT_DIR
             chmod -R 775 $ROOT_DIR
 
