@@ -15,9 +15,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd ${{ secrets.PROJECT_PATH }} || exit 1
-            echo "Current directory: $(pwd)"
-            echo "Attempting git pull..."
-            sudo git pull || echo "Git pull failed with error code: $?"
-            echo "Checking git status..."
-            git status
+            cd ${{ secrets.PROJECT_PATH }}
+            sudo git pull
