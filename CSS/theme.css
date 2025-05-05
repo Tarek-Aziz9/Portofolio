@@ -1,5 +1,5 @@
 :root {
-    /* Thème clair (par défaut) */
+    /* Thème clair */
     --background-color: #ffffff;
     --text-color: #333333;
     --header-bg: #ffffff;
@@ -59,7 +59,7 @@
     font-size: 24px;
 }
 
-/* Ajustement pour mobile */
+/* Responsive pour mobile */
 @media (max-width: 768px) {
     .theme-toggle {
         right: 20px;
@@ -72,8 +72,6 @@
         font-size: 20px;
     }
 }
-
-/* Styles généraux */
 body {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
@@ -88,7 +86,6 @@ p {
     color: var(--text-color) !important;
 }
 
-/* Conteneurs spécifiques */
 .container,
 .row,
 [class^="col-"] {
@@ -235,7 +232,7 @@ a:hover {
     z-index: 1000;
 }
 
-/* Style du menu burger */
+/* Style du menu */
 .navbar-toggle {
     border-color: var(--text-color);
     margin-right: 45px;
@@ -426,7 +423,7 @@ a:hover {
     opacity: 0.8;
 }
 
-/* Correction pour la navbar */
+/* Navbar */
 .header .navbar {
     background-color: var(--background-color) !important;
 }

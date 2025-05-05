@@ -1,10 +1,9 @@
-/* Règles générales de responsive */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Petits écrans (smartphones) */
+/* Responsive mobile */
 @media (max-width: 576px) {
     .carousel-title {
         font-size: 24px;
