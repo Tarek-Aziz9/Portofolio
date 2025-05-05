@@ -16,79 +16,79 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             echo "=== Début du déploiement ==="
- 
+
             # Vérification de la configuration Nginx
             echo "Configuration Nginx :"
             sudo nginx -T | grep -A 20 "server_name tarek-aziz.alassani.angers.mds-project.fr"
- 
+
             # Vérification du répertoire root
-            ROOT_DIR="/var/www/html/Portfolio"
+            ROOT_DIR="/var/www/html/Portofolio"
             echo "Répertoire root : $ROOT_DIR"
- 
+
             # Vérification de l'état actuel
             echo "État actuel du répertoire :"
             ls -la $ROOT_DIR
- 
+
             # Sauvegarde des permissions actuelles
             echo "Sauvegarde des permissions actuelles..."
             sudo chown -R www-data:www-data $ROOT_DIR
             sudo chmod -R 775 $ROOT_DIR
- 
+
             # Configuration de Git
             echo "Configuration de Git..."
             sudo git config --global --add safe.directory $ROOT_DIR
             git config --global --list
- 
+
             # Mise à jour du code
             echo "Mise à jour du code..."
             cd $ROOT_DIR
- 
+
             # Forcer la mise à jour
             echo "Forçage de la mise à jour..."
             sudo git fetch origin
-            sudo git reset --hard origin/master
+            sudo git reset --hard origin/main
             sudo git clean -fd
-            sudo git pull origin master
- 
+            sudo git pull origin main
+
             # Configuration finale des permissions
             echo "Configuration finale des permissions..."
             sudo find $ROOT_DIR -type d -exec chmod 775 {} \;
             sudo find $ROOT_DIR -type f -exec chmod 664 {} \;
             sudo chmod -R g+s $ROOT_DIR
- 
+
             # Vérification finale
             echo "=== Vérification finale ==="
             echo "Contenu du répertoire :"
             ls -la $ROOT_DIR
             echo "Derniers commits :"
             git log -n 3 --oneline
- 
+
             # Vérification des fichiers PHP
             echo "Vérification des fichiers PHP :"
             ls -la $ROOT_DIR/*.php
- 
+
             # Vérification des permissions
             echo "Vérification des permissions :"
             sudo ls -la $ROOT_DIR
             sudo ls -la $ROOT_DIR/css
             sudo ls -la $ROOT_DIR/img
- 
+
             # Vérification de la configuration Nginx
             echo "Vérification de la configuration Nginx :"
             sudo nginx -t
- 
+
             # Redémarrage de Nginx si nécessaire
             if [ $? -eq 0 ]; then
               echo "Redémarrage de Nginx..."
               sudo systemctl restart nginx
             fi
- 
+
             # Vérification du statut de Nginx
             echo "Statut de Nginx :"
             sudo systemctl status nginx
- 
+
             # Vérification des logs Nginx
             echo "Dernières lignes des logs Nginx :"
             sudo tail -n 20 /var/log/nginx/error.log
- 
+
             echo "=== Fin du déploiement ==="
