@@ -22,7 +22,7 @@ jobs:
             sudo nginx -T | grep -A 20 "server_name tarek-aziz.alassani.angers.mds-project.fr"
  
             # Vérification du répertoire root
-            ROOT_DIR="/var/www/html/Portofolio"
+            ROOT_DIR="/var/www/html/Portfolio"
             echo "Répertoire root : $ROOT_DIR"
  
             # Vérification de l'état actuel
@@ -31,7 +31,7 @@ jobs:
  
             # Sauvegarde des permissions actuelles
             echo "Sauvegarde des permissions actuelles..."
-            sudo chown -R debian:www-data $ROOT_DIR
+            sudo chown -R www-data:www-data $ROOT_DIR
             sudo chmod -R 775 $ROOT_DIR
  
             # Configuration de Git
