@@ -4,6 +4,14 @@ DirectoryIndex index.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+    
+    # Autoriser l'accès direct aux fichiers statiques
+    RewriteCond %{REQUEST_URI} !^/vendor/
+    RewriteCond %{REQUEST_URI} !^/js/
+    RewriteCond %{REQUEST_URI} !^/css/
+    RewriteCond %{REQUEST_URI} !^/img/
+    
+    # Rediriger les autres requêtes vers index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php [L]
@@ -12,9 +20,17 @@ DirectoryIndex index.php
 # Désactiver l'affichage du contenu des répertoires
 Options -Indexes
 
-# Gestion du cache pour le développement
+# Gestion du cache pour les fichiers statiques
 <IfModule mod_headers.c>
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires 0
+    # Cache pour les fichiers statiques
+    <FilesMatch "\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # Pas de cache pour le développement
+    <FilesMatch "\.(php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
 </IfModule> 
